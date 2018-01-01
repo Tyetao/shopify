@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section class="shopify-details">
+        <div class="banner"></div>
+        <div class="price-container">
+            <span class="price">$666</span>
+            <del>$5555</del>
+            <p class="desc">蒙牛特仑苏纯牛奶250ml*16盒营养升级 专属牧场</p>
+            <div class="share"></div>
+        </div>
+        <div class="time-container">
+            <div class="sala-w">
+                <label class="sala">已售</label>
+                <span class="sala-num">134564件</span>
+            </div>
+            <div class="percentage-bg">
+                <div class="percentage"></div>
+                <span  class="percentage-text">已抢90%</span>
+            </div>
+            <ul>
+                <li>七天無理由退換</li>
+                <li>免运费配送</li>
+                <li>支持貨到付款</li>
+            </ul>
+
+            <div class="time-w">
+                <p class="time-text">限时抢购</p>
+                <div class="time-time"></div>
+            </div>
+        </div>
+        <div class="line-details"></div>
+        <div class="evaluate-container">
+            <div class="evaluate-top">
+                <div class="evaluate-top-l">
+                    <label>商品评价</label>
+                    <span>5.0分</span>
+                </div>
+                <div class="evaluate-top-r">
+                    查看全部
+                    <span class="span-arrow"></span>
+                </div>
+            </div>
+            <div class="evaluate-bottom">
+                <ul>
+                    <li>
+                        <div class="li-top">
+                            <div class="img"></div>
+                            <div class="li-top-name-w">
+                                <span class="li-top-name">Jonas Kreiger</span><div class="li-top-start"></div>
+                            </div>
+                            <div class="li-top-time">2017-07-06</div>
+                        </div>
+                        <div class="li-bottom">
+                                доставка чуть меньше месяца из Китая, из них 16дней из Москвы в Казань, упаковано всё хорошо,спасибо друг) будузаказывать ещё)
+                        </div>
+                    </li>
+                    <li>
+                            <div class="li-top">
+                                <div class="img"></div>
+                                <div class="li-top-name-w">
+                                    <span class="li-top-name">Jonas Kreiger</span><div class="li-top-start"></div>
+                                </div>
+                                <div class="li-top-time">2017-07-06</div>
+                            </div>
+                            <div class="li-bottom">
+                                    доставка чуть меньше месяца из Китая, из них 16дней из Москвы в Казань, упаковано всё хорошо,спасибо друг) будузаказывать ещё)
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="line-details"></div>
+        <div class="c-title">
+            <div></div>
+            <span>商品详情</span>
+        </div>
+        <div>
+            asdasdasdasdasdhfasdhf 手拉手宽度阿斯加德发货ad回复安徽的 
+        </div>
+
+        <div class="line-details"></div>
+        <div class="c-title">
+            <div></div>
+            <span>商品推荐</span>
+        </div>
+
+        <div class="line-details"></div>
+        <div class="c-title">
+            <div></div>
+            <span>看了还看</span>
+        </div>
+    </section>
+    <!--底部-->
+    <section class="footer-nav">
+        <div class="chat"></div>
+        <div class="love"></div>
+        <div class="buy">立即购买</div>
+        <div class="cart"><a href="cart.html">加入购物车</a></div>
+    </section>
+    <!--弹窗-->
+    <section class="buy-mode">
+        <div class="buy-mode-in">
+            <div class="buy-mode-top">
+                    <div class="img"></div>
+                    <div class="price-w">
+                        <label class="price">$44455</label>
+                        <span class="price-in">$44455</span>
+                    </div>
+                    <div class="btn-num">
+                        <div class="btn-num-l">-</div>
+                        <div class="btn-num-c">2</div>
+                        <div class="btn-num-r">+</div>
+                    </div>
+                </div>
+                <div class="buy-mode-content">
+                    <div class="attr-w">
+                        <h2>商品属性</h2>
+                        <div class="attr-item">我叫属性</div>
+                        <div class="attr-item">我叫属性</div>
+                    </div>
+                    <div class="attr-w">
+                            <h2>商品属性</h2>
+                            <div class="attr-item">我叫属性</div>
+                            <div class="attr-item">我叫属性</div>
+                        </div>
+                </div>
+                <div class="buy-mode-btn">
+                        确认下单
+                </div>
+        </div>
+    </section>
+</body>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/rem.js"></script>
+<script>
+    $(function(){
+        $('.buy-mode').click(function(event){
+            $('.buy-mode').hide();
+        })
+        $('.buy-mode-in').click(function(event){
+            event.stopPropagation();
+        })
+        $('.footer-nav .buy').click(function(){
+            $('.buy-mode').show();
+        })
+    })
+</script>
+</html>
