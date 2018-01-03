@@ -9,20 +9,25 @@
     <title>购物车</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<style>
 
+</style>
 <body>
     <section class="shopping-cart">
         <div class="tip">欢迎来到，每天都有折扣促销在进行！</div>
         <div class="cart-list">
             <div class="top">
                 <div class="t-l">
-                    <input type="checkbox" name="" id="">  折扣航运最低可达$250
+                        <label class="checkbox"><input type="checkbox"><span></span></label>
                 </div>
-                <div class="t-r">编辑</div>
+                <div class="t-c">折扣航运最低可达$250</span>
+                </div>
+                <div class="t-r edit_">编辑</div>
+                <div class="t-r ok_" style="display:none">完成</div>
             </div>
             <div class="bottom">
                 <div class="checkout">
-                    <input type="checkbox" name="" id="">
+                        <label class="checkbox"><input type="checkbox"><span></span></label>
                 </div>
                 <div class="img"></div>
                 <div class="desc">
@@ -40,18 +45,24 @@
                         </div>
                 </div>
             </div>
+            <div class="remove_">
+                    删除
+                </div>
         </div>
         <div class="line-details"></div>
         <div class="cart-list">
                 <div class="top">
-                    <div class="t-l">
-                        <input type="checkbox" name="" id="">  折扣航运最低可达$250
-                    </div>
-                    <div class="t-r">完成</div>
+                        <div class="t-l">
+                                <label class="checkbox"><input type="checkbox"><span></span></label>
+                        </div>
+                        <div class="t-c">折扣航运最低可达$250</span>
+                        </div>
+                        <div class="t-r edit_">编辑</div>
+                <div class="t-r ok_" style="display:none">完成</div>
                 </div>
                 <div class="bottom">
                     <div class="checkout">
-                        <input type="checkbox" name="" id="">
+                            <label class="checkbox"><input type="checkbox"><span></span></label>
                     </div>
                     <div class="img"></div>
                     <div class="desc">
@@ -64,11 +75,14 @@
                     <div class="btn-num-w">
                         <div class="btn-num">
                                 <div class="btn-num-l">-</div>
-                                <div class="btn-num-c">2</div>
+                                <div class="btn-num-c">1</div>
                                 <div class="btn-num-r">+</div>
                             </div>
                     </div>
                 </div>
+                <div class="remove_">
+                        删除
+                    </div>
             </div>
     </section>
     <div class="line-details"></div>
@@ -115,7 +129,8 @@
     <section class="cart-footer">
         <div class="l">
             <div class="all">
-                <input type="checkbox" name="" id="">全选
+                <label class="checkbox"><input type="checkbox"><span></span></label>
+                <span style="vertical-align: super; display: inline-block;margin-left: 4px">全选</span>
             </div>
             <div class="price">
                 总计  <span>￥400</span>
@@ -128,5 +143,31 @@
 </body>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/rem.js"></script>
+<script>
+    $('.cart-list .top .edit_').click(function(e) {
+        $(this).hide();
+        $(this).siblings('.ok_').show();
+        $(this).closest('.top').siblings('.bottom').css({'Transform':'translateX(-60px)'});
+        $(this).closest('.top').siblings('.remove_').css({'right':'0'})
+    })
+    $('.cart-list .top .ok_').click(function(e) {
+        $(this).hide();
+        $(this).siblings('.edit_').show();
+        $(this).closest('.top').siblings('.bottom').css({'Transform':'translateX(0)'});
+        $(this).closest('.top').siblings('.remove_').css({'right':'-60px'})
+    })
 
+    var num = 1;
+
+		$('.btn-num-r').click(function(){
+			num++;
+            $(this).siblings('.btn-num-c').html(num);
+		})
+		$('.btn-num-l').click(function(){
+			if (num > 1) {
+				num--;
+            $(this).siblings('.btn-num-c').text(num);
+           }
+		})
+</script>
 </html>

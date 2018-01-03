@@ -682,6 +682,8 @@ a{
         color: #666666;
     }
     .cart-list{
+        overflow: hidden;
+        position: relative;
         padding: 0 .71rem;
         .top{
             display: flex;
@@ -689,12 +691,15 @@ a{
             height: 3.14rem;
             border-bottom: 1px solid #eee;
             .t-l{
-                width: 80%;
+                width: 3.43rem;
+               label{
+                margin-top: 3px;
+                height: 20px;
+               }
+            }
+            .t-c{
                 font-size: 0.86rem;
                 color: #666666;
-                input{
-                    margin-right: 2.3rem;
-                }
             }
             .t-r{
                 flex: 1;
@@ -743,6 +748,17 @@ a{
                     right: 0;
                 }
             }
+        }
+        .remove_{
+            height: 5.71rem;
+            width: 60px;
+            background: red;
+            position: absolute;
+            right: -60px;
+            line-height: 5.71rem;
+            text-align: center;
+            top: 3.85rem;
+            color: #fff;
         }
     }
 }
@@ -944,7 +960,11 @@ font-size: 16px;
 color: #222222;
 }
 
-
+/*复选框*/
+input[type="checkbox"]{appearance: none; -webkit-appearance: none;outline: none;display:none}
+label.checkbox{display:inline-block;cursor:pointer;}
+label.checkbox input[type="checkbox"] + span{width:20px;height:20px;display:inline-block;border: 2px solid #E1E1E1;border-radius: 3px;}
+label.checkbox input[type="checkbox"]:checked + span{background: url(../imgs/chack.png) no-repeat center center; background-size: 100%;}
 
 
 /*右箭头*/
